@@ -1,0 +1,26 @@
+
+<article id="peak" class="peak">
+    <header>
+        <h2><%= @peak.name %> (<%= @peak.height %> ft.)</h2>
+        <h3><%= @peak.range %></h3>
+    </header>
+    <p>
+        <%= truncate(@peak.description, length: 150, separator: ' ') %>
+    </p>
+    <table>
+        <tr>
+        <th>Difficulty</th>
+        <td><%= @peak.difficulty %></td>
+        </tr>
+        <tr>
+        <th>Round Trip Miles</th>
+        <td><%= @peak.roundtrip_miles %></td>
+        </tr>
+        <tr>
+        <th>Round Trip Duration</th>
+        <td><%= @peak.roundtrip_duration %>
+        </tr>
+    </table>
+    <footer>
+    </footer>
+</article>

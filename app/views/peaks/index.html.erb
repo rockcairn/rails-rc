@@ -1,0 +1,31 @@
+<ul id="peaks">
+  <% @peaks.each do |peak| %>
+    <li>
+      <article class="peak">
+        <header>
+          <h2><%= link_to peak.name, peak %> (<%= peak.height %> ft.)</h2>
+          <h3><%= peak.range %></h3>
+        </header>
+        <p>
+          <%= truncate(peak.description, length: 150, separator: ' ') %>
+        </p>
+        <table>
+          <tr>
+            <th>Difficulty</th>
+            <td><%= peak.difficulty %></td>
+          </tr>
+          <tr>
+            <th>Round Trip Miles</th>
+            <td><%= peak.roundtrip_miles %></td>
+          </tr>
+          <tr>
+            <th>Round Trip Duration</th>
+            <td><%= peak.roundtrip_duration %>
+          </tr>
+        </table>
+        <footer>
+        </footer>
+      </article>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  height: 1
+  range: MyString
+  domain: MyString
+  relative_path: MyString
+  description: MyString
+  keywords: MyString
+  report_date: 2025-04-28
+  difficulty: MyString
+  roundtrip_miles: MyString
+  elevation_gain: 1
+  roundtrip_duration: MyString
+  solo: false
+  combo: false
+  marker_id: 1
+
+two:
+  name: MyString
+  height: 1
+  range: MyString
+  domain: MyString
+  relative_path: MyString
+  description: MyString
+  keywords: MyString
+  report_date: 2025-04-28
+  difficulty: MyString
+  roundtrip_miles: MyString
+  elevation_gain: 1
+  roundtrip_duration: MyString
+  solo: false
+  combo: false
+  marker_id: 1

@@ -25,11 +25,13 @@ rails -v # should show something like Rails 8.0.x
 
 * Configuration
 
+* Database initialization
+```brew install postgresql```
+```brew services start postgresql```
+- for macos if you don't setup a user its just your macos user name with know password
+
 * Database creation
 ```bin/rails db:create```
-
-* Database initialization
-```brew services start postgresql```
 
 * Run the Service
 ```bin/rails server```
