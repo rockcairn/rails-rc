@@ -8,18 +8,32 @@
         <%= truncate(@peak.description, length: 150, separator: ' ') %>
     </p>
     <table>
-        <tr>
-        <th>Difficulty</th>
-        <td><%= @peak.difficulty %></td>
-        </tr>
-        <tr>
-        <th>Round Trip Miles</th>
-        <td><%= @peak.roundtrip_miles %></td>
-        </tr>
-        <tr>
-        <th>Round Trip Duration</th>
-        <td><%= @peak.roundtrip_duration %>
-        </tr>
+        <thead class="rounded-lg text-left text-sm font-normal">
+            <tr>
+                <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
+                    Difficulty
+                </th>
+                <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
+                    Round Trip Miles
+                </th>
+                <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
+                    Round Trip Duration
+                </th>
+            </tr>
+        </thead>
+        <tbody class="bg-white">
+            <tr key=<%= @peak.id %> class="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg" >
+                <td class="whitespace-nowrap text-center px-3 py-3"> 
+                    <%= @peak.difficulty %>
+                </td>
+                <td class="whitespace-nowrap text-center px-3 py-3">
+                    <%= @peak.roundtrip_duration %>
+                </td>
+                <td class="whitespace-nowrap text-center px-3 py-3">
+                    <%= @peak.roundtrip_miles %>
+                </td>
+            </tr>
+        </tbody>
     </table>
     <footer>
     </footer>

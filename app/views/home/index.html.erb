@@ -1,3 +1,28 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<p>add a side nav and pages</p>
+<div class="w-full">
+      <h1 class="text-2xl">Home</h1>
+      <div class="grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <main class="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+            <%= image_tag 'rockymountains.jpg', alt: 'Pallavicini Chair, Arapahoe Basin', width: '789', height: '429' %>
+          <ol class="list-inside list-decimal text-sm text-center p-8 sm:text-left font-[family-name:var(--font-geist-mono)]">
+            <li class="mb-2">Get started with: Readme.md</li>
+          </ol>
+        </main>
+        <footer class="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+          <%= link_to 'https://github.com/rockcairn/rails-rc/blob/main/README.md', target: '_blank', rel: 'noopener', class: 'flex items-center gap-2 hover:underline hover:underline-offset-4' do %>
+                <%= image_tag 'file.svg', alt: 'File icon', width: '16', height: '16' %>
+                Readme.md 
+          <% end %>
+
+          <%= link_to 'https://www.rockcairn.com', target: '_blank', rel: 'noopener', class: 'flex items-center gap-2 hover:underline hover:underline-offset-4' do %>
+                <%= image_tag 'globe.svg', alt: 'Globe icon', width: '16', height: '16' %>
+                Go to rockcairn.com → 
+          <% end %>
+
+          <%= link_to 'https://guides.rubyonrails.org/getting_started.html', target: '_blank', rel: 'noopener', class: 'flex items-center gap-2 hover:underline hover:underline-offset-4' do %>
+                <%= image_tag 'globe.svg', alt: 'Globe icon', width: '16', height: '16' %>
+                Go to rubyrails.org → 
+          <% end %>
+
+        </footer>
+      </div>
+    </div>

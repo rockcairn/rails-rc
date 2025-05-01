@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "map/index"
+  get "about/index"
   root "home#index"
   get "peaks/index"
   get "peaks/show"
