@@ -1,40 +1,46 @@
-
+<% content_for :title, "RockCairn - " + @peak.name %>
 <article id="peak" class="peak">
     <header>
-        <h2><%= @peak.name %> (<%= @peak.height %> ft.)</h2>
+        <div class="flex flex-row">
+            <div class="basis-64"><h2><%= @peak.name %> (<%= @peak.height %> ft.)</h2></div>
+            <div class="basis-64"><%= link_to 'Back', peaks_path, class: 'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:p-2 md:px-3' %></div>
+            <div class="basis-128"></div>
+        </div>
         <h3><%= @peak.range %></h3>
     </header>
-    <p>
+    <div class="flex flex-row">
         <%= truncate(@peak.description, length: 150, separator: ' ') %>
-    </p>
-    <table>
-        <thead class="rounded-lg text-left text-sm font-normal">
-            <tr>
-                <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
-                    Difficulty
-                </th>
-                <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
-                    Round Trip Miles
-                </th>
-                <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
-                    Round Trip Duration
-                </th>
-            </tr>
-        </thead>
-        <tbody class="bg-white">
-            <tr key=<%= @peak.id %> class="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg" >
-                <td class="whitespace-nowrap text-center px-3 py-3"> 
-                    <%= @peak.difficulty %>
-                </td>
-                <td class="whitespace-nowrap text-center px-3 py-3">
-                    <%= @peak.roundtrip_duration %>
-                </td>
-                <td class="whitespace-nowrap text-center px-3 py-3">
-                    <%= @peak.roundtrip_miles %>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    </div>
+    <div class="rounded-lg bg-gray-50 p-2 md:pt-0">
+        <table class="hidden text-gray-900 md:table">
+            <thead class="rounded-lg text-left text-sm font-normal">
+                <tr>
+                    <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
+                        Difficulty
+                    </th>
+                    <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
+                        Round Trip Miles
+                    </th>
+                    <th scope="col" class="px-4 py-5 font-bold sm:pl-6">
+                        Round Trip Duration
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="bg-white">
+                <tr key=<%= @peak.id %> class="w-full border-b py-3 text-sm last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg" >
+                    <td class="whitespace-nowrap text-center px-3 py-3"> 
+                        <%= @peak.difficulty %>
+                    </td>
+                    <td class="whitespace-nowrap text-center px-3 py-3">
+                        <%= @peak.roundtrip_duration %>
+                    </td>
+                    <td class="whitespace-nowrap text-center px-3 py-3">
+                        <%= @peak.roundtrip_miles %>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <footer>
     </footer>
 </article>
