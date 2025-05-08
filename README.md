@@ -42,3 +42,6 @@ bin/rails db:seed
 
 ## Open Browser
 - [http://localhost:3000](http://localhost:3000)
+
+## Run the tests
+- ```bin/rails test```
