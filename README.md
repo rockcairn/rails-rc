@@ -19,6 +19,10 @@ rails -v # should show something like Rails 8.0.x
 - Content choices are from [rockcairn.com](http://rockcairn.com)
   - a reinvisioning of the rockcairn site as a Rails app
 
+| Home Page  | Peaks Page |
+| ---------- | ---------- |
+| ![Home Page](/public/documentation/home-page.jpg) | ![Peaks Page](/public/documentation/peaks-page.jpg) |
+
 ## Database initialization
 ```
 brew install postgresql
