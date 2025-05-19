@@ -11,7 +11,6 @@
 
 Peak.create!([
   {
-    id: 1,
     name: 'Mount Elbert',
     height: 14440,
     range: 'Sawatch',
@@ -29,7 +28,6 @@ Peak.create!([
     marker_id: 1
   },
   {
-    id: 2,
     name: 'Mount Massive',
     height: 14428,
     range: 'Sawatch',
@@ -47,7 +45,6 @@ Peak.create!([
     marker_id: 2
   },
   {
-    id: 3,
     name: 'Mount Harvard',
     height: 14427,
     range: 'Sawatch',
@@ -65,7 +62,6 @@ Peak.create!([
     marker_id: 3
   },
   {
-    id: 4,
     name: 'Blanca Peak',
     height: 14349,
     range: 'Sangre de Cristo',
@@ -83,7 +79,6 @@ Peak.create!([
     marker_id: 4
   },
   {
-    id: 5,
     name: 'La Plata Peak',
     height: 14343,
     range: 'Sawatch',
@@ -101,7 +96,6 @@ Peak.create!([
     marker_id: 5
   },
   {
-    id: 6,
     name: 'Uncompahgre Peak',
     height: 14314,
     range: 'San Juan',
@@ -119,7 +113,6 @@ Peak.create!([
     marker_id: 6
   },
   {
-    id: 7,
     name: 'Crestone Peak',
     height: 14298,
     range: 'Sangre de Cristo',
@@ -137,7 +130,6 @@ Peak.create!([
     marker_id: 7
   },
   {
-    id: 8,
     name: 'Mount Lincoln',
     height: 14291,
     range: 'Ten Mile',
