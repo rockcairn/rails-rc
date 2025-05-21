@@ -1,10 +1,31 @@
 class PeaksController < ApplicationController
   def index
-    @peaks = Peak.all
+    @peaks = Peak.order("id ASC").all
   end
 
   def show
     @peak = Peak.find(params[:id])
+  end
+
+  def edit
+    @peak = Peak.find(params[:id])
+  end
+
+  def update
+    @peak = Peak.find(params[:id])
+    if @peak.update(peak_params)
+      redirect_to @peak, notice: "Peak Report successfully updated!"
+      # render json: @peak, status: :ok
+    else
+      render json: @peak.errors, status: :unprocessable_entity
+    end
+  end
+  def destroy
+    @peak = Peak.find(params[:id])
+    @name = @peak.name
+    @peak.destroy
+    redirect_to peaks_path, alert: "Peak Report successfully deleted!", danger: "You just delete the Peak Report for #{@name}"
+    # render json: { message: "Peak Report successfully deleted!" }, status: :ok
   end
 
   def new
