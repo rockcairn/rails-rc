@@ -17,7 +17,7 @@ class PeaksController < ApplicationController
       redirect_to @peak, notice: "Peak Report successfully updated!"
       # render json: @peak, status: :ok
     else
-      render json: @peak.errors, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
   def destroy
@@ -38,7 +38,7 @@ class PeaksController < ApplicationController
       redirect_to @peak, notice: "Peak Report successfully created!"
       # render json: @peak, status: :created
     else
-      render json: @peak.errors, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 

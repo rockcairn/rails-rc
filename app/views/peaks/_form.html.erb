@@ -2,7 +2,7 @@
 <%= form_with(model: @peak, local: true) do |form| %>
 <div class="rounded-md bg-gray-100 p-4 md:p-6">
   <% if @peak.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="text-red-500">
       <h2><%= pluralize(@peak.errors.count, "error") %> prohibited this peak from being saved:</h2>
       <ul>
         <% @peak.errors.full_messages.each do |message| %>
