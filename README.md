@@ -5,6 +5,14 @@
 brew install rbenv
 rbenv install 3.3.4
 rbenv global 3.3.4
+```
+update ~/.zshrc file with
+```
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+```
+
+```
 ruby -v
 ```
 ## Rails 8
@@ -12,7 +20,7 @@ ruby -v
 gem install rails
 rails -v # should show something like Rails 8.0.x
 ```
-## Create Project
+## This project was created using the following script
 ```rails new rails-rc -d postgresql```
 
 ## Project Concept
